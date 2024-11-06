@@ -269,10 +269,13 @@ public class VendingMachine implements VMAdminAPI, VMCustomerAPI {
                 remainder = remainder % 10;
                 int five = remainder / 5;
                 remainder = remainder % 5;
+                int two = remainder / 2;
+                remainder = remainder % 2;
                 int penny = remainder;
-                int [] coinArray = {twopounds,pound,fifty,twenty,ten,five,penny};
+                int [] coinArray = {twopounds,pound,fifty,twenty,ten,five,two,penny};
                 HashMap<Coin, Integer> ChangeHash = new HashMap<>();
                 HashMap<Coin, Integer> customerBalBackup = customerBalance.getCurrentBalanceHash();
+
                 for(int i = 0; i < Coin.values().length; i++)
                 {
                     ChangeHash.put(Coin.values()[i],coinArray[i]);

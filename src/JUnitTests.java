@@ -108,7 +108,7 @@ public class JUnitTests {
             vendingMachine.insertCoin(c);
         }
 
-        Assert.assertEquals(vendingMachine.getCurrentBalance(), 386);
+        Assert.assertEquals(vendingMachine.getCurrentBalance(), 388);
     }
 
     @Test
